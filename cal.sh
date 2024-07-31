@@ -11,7 +11,12 @@ x = a + b;
 y = a - b;
 
 
+
 # woking on merge and rebase 
 
 
 v = a % b;
+
+
+z = a / b;
+
