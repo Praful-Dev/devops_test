@@ -1,28 +1,7 @@
 #!/bin/bash
 
-#learning Git with help of calculator examples
+# URL of the log file (could be from GitHub or S3 bucket)
+LOG_FILE_URL="https://path/to/your/logfile.log"  # Replace with your log file URL
 
-# this is test change 
-# 
-#
-x = a + b;
-
-
-y = a - b;
-
-
-
-# woking on merge and rebase 
-
-
-v = a % b;
-
-
-z = a / b;
-
-
-
-#testing how to merge the branches
-
-w = a * b;
-
+# Fetch the log file using curl and search for 'Error' using grep
+curl -s "$LOG_FILE_URL" | grep -oP 'Error.*\bPID:\s*(\d+)' | awk '{print $NF}'
